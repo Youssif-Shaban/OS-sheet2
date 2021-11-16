@@ -1,0 +1,24 @@
+#!/bin/bash
+echo " enter a positive integer : "
+read n
+total=0
+count=0
+while [ $n -ne 0 ]    
+do
+    if [ $n -gt 0 ]
+    then
+          total = $(($total + $n))
+          count=$(($count + 1))
+    else 
+          echo " ERROR , please enter a posive number "
+    fi
+    echo " enter a positive integer : "
+    read n
+done 
+if [ $count -eq 0 ]
+then 
+      echo " NO AVERAGE"
+else 
+      echo " the average is : $total / $count "  | bc
+fi
+
