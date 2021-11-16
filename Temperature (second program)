@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "Temperature"
+
+echo "enter temperature in degrees celsuis : "
+read celsuis
+f=$(((celsuis*9/5)+32)))
+
+echo "temperature in fahrenheit is : $f"
