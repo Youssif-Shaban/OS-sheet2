@@ -1,0 +1,28 @@
+#!/bin/bash
+echo " enter your number : "
+read n
+p=$n
+r=0
+sum=0
+count=0
+
+while [ $p -gt 0 ]
+do 
+    r=$(($r * 10))
+    t=$(($p % 10))
+    r=$(($r + $t))
+    p=$(($p / 10))
+done
+
+while [ $n -gt 0 ] 
+do
+    d=$(($n % 10))
+    n=$(($n / 10))
+    sum=$(($sum + $d))
+    count=$(($count + 1))
+    
+done
+
+echo " your number in reverse order is : $r"
+echo " the sum of your number digits is : $sum"
+echo " the average of your number digits is : $sum / $count " | bc
