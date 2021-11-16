@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo " enter the first number : "
+read num1
+echo " enter the second number : "
+read num2
+r=1
+for (( i=0 ; i<num2 ; i++))
+do
+    r=$(expr $r \* $num1 )
+done
+
+echo " RESULT : $r"
