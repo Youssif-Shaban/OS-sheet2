@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "enter the number of seconds : "
+read s
+h=0
+h=$(expr $s/3600)
+s=$(expr $s%3600)
+m=0
+m=$(expr $s/60)
+s=$(expr $s%60)
+
+echo "Equivalent period : $h : $m : $s"
