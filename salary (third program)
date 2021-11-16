@@ -1,0 +1,16 @@
+#!/bin/bash
+echo " salary program"
+
+echo " enter your gross salary : "
+read s1
+if [ $s1 -ge 2000 ]
+then
+      s2=$(($s1 - ($s1 * 15/100)))
+elif [ $s1 -lt 2000 -a $s1 -ge 1000 ]
+then 
+      s2=$(($s1 - ($s1 * 10/100)))
+else
+      s2=$(($s1))
+fi
+
+echo "your net salary after rax reduction is : $s2 "
